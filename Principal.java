@@ -11,18 +11,25 @@ package com.mycompany.principal;
 public class Principal {
 
     public static void main(String[] args) {
-        Endereco casa = new Endereco("Rua da putaria", 69, "Salvador");
-        Cliente cliente = new Cliente("Marivaldo", 24, casa);
+        Cliente cliente = new Cliente("14/08/2024", "PIX", "Luis", 21, "Rua de baixo, Periperi, Salvador", "71 98869-2345");
+        
+        Funcionario funcionario = new Funcionario(4872, "CEO", "LPL", 21, "Rua da glória, Periperi, Salvador", "71 98632-4801");
         
         
-        System.out.println("Nome: "+ cliente.getNome());
-        System.out.println("Idade do cliente: "+cliente.getIdade()+" anos");
+        System.out.println("\nDados do cliente:");
+        System.out.println("Nome: "+cliente.getNome());
+        System.out.println("Idade: "+cliente.getIdade());
+        System.out.println("Telefone: "+cliente.getTelefone());
+        System.out.println("Data da compra: "+cliente.getData_compra());
+        System.out.println("Forma de pagamento: "+cliente.getForma_pagamento());
+        System.out.println("Endereço: "+cliente.getEndereco());
         
-       
-        System.out.println("Endereço do cliente:");
-        System.out.println("Rua"+cliente.getEndereco().getLogradouro());
-        System.out.println("Número da casa: "+cliente.getEndereco().getNumero());
-        System.out.println("Cidade: "+cliente.getEndereco().getCidade());
+        System.out.println("\nDados do funcionário: ");
+        System.out.println("Nome: "+funcionario.getNome());
+        System.out.println("Idade: "+funcionario.getIdade());
+        System.out.println("Telefone: "+funcionario.getTelefone());
+        System.out.println("Matricula: "+funcionario.getMatricula());
+        System.out.println("Cargo: "+funcionario.getCargo());
+        System.out.println("Endereço: "+funcionario.getEndereco());
     }
-    
 }

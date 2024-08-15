@@ -8,39 +8,32 @@ package com.mycompany.principal;
  *
  * @author Aluno
  */
-public class Cliente {
-    private String nome;
-    private int idade;
-    private Endereco endereco;
+public class Cliente extends Pessoa{
+    private String data_compra;
+    private String forma_pagamento;
 
-    public Cliente(String nome, int idade, Endereco endereco) {
-        this.nome = nome;
-        this.idade = idade;
-        this.endereco = endereco;
+    public Cliente(String data_compra, String forma_pagamento, String nome, int idade, String endereco, String telefone) {
+        super(nome, idade, endereco, telefone);
+        this.data_compra = data_compra;
+        this.forma_pagamento = forma_pagamento;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
+    public String getData_compra() {
+        return data_compra;
     }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    public void setData_compra(String data_compra) {
+        this.data_compra = data_compra;
     }
 
-    public String getNome() {
-        return nome;
+    public String getForma_pagamento() {
+        return forma_pagamento;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setForma_pagamento(String forma_pagamento) {
+        this.forma_pagamento = forma_pagamento;
     }
 
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
     
 }
+
