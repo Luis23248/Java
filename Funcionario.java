@@ -2,37 +2,75 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.principal;
+package com.mycompany.diagramadeclasses;
 
 /**
  *
  * @author Aluno
  */
-public class Funcionario extends Pessoa{
-    private int matricula;
-    private String cargo;
+public class Funcionario {
+    private int id;
+    private String nome   ;     
+    private int idade    ;    
+    private double salario;
+    private Setor setor;
+    private Sexo sexo;
 
-    public Funcionario(int matricula, String cargo, String nome, int idade, String endereco, String telefone) {
-        super(nome, idade, endereco, telefone);
-        this.matricula = matricula;
-        this.cargo = cargo;
+    public Funcionario(int id, String nome, int idade, double salario, Setor setor, Sexo sexo) {
+        this.id = id;
+        this.nome = nome;
+        this.idade = idade;
+        this.salario = salario;
+        this.setor = setor;
+        this.sexo = sexo;
     }
 
-    public int getMatricula() {
-        return matricula;
+    public Sexo getSexo() {
+        return sexo;
     }
 
-    public void setMatricula(int matricula) {
-        this.matricula = matricula;
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
     }
 
-    public String getCargo() {
-        return cargo;
+    public int getId() {
+        return id;
     }
 
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
+    public void setId(int id) {
+        this.id = id;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public Setor getSetor() {
+        return setor;
+    }
+
+    public void setSetor(Setor setor) {
+        this.setor = setor;
+    }
     
 }
