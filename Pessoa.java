@@ -2,31 +2,41 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.principal;
+package com.mycompany.principal3;
 
 /**
  *
  * @author Aluno
  */
 public abstract class Pessoa {
+    protected int id;
     protected String nome;
-    protected int idade;
-    protected String endereco;
     protected String telefone;
+    protected String email;
+    protected Endereco endereco;
 
-    public Pessoa(String nome, int idade, String endereco, String telefone) {
+    public Pessoa(int id, String nome, String telefone, String email, Endereco endereco) {
+        this.id = id;
         this.nome = nome;
-        this.idade = idade;
+        this.telefone = telefone;
+        this.email = email;
         this.endereco = endereco;
-        this.telefone = telefone;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public Endereco getEndereco() {
+        return endereco;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -37,22 +47,24 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
-    public int getIdade() {
-        return idade;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setEmail(String email) {
+        this.email = email;
     }
-
+    
+    
+    
     
     
 }

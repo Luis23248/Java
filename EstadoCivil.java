@@ -8,19 +8,21 @@ package com.mycompany.principal3;
  *
  * @author Aluno
  */
-public enum Setor {
-    ENGENHARIA("Engenharia"),
-    SAUDE("Saude"),
-    JURIDICO("Juridico");
+public enum EstadoCivil {
+    SOLTEIRO("Solteiro"),
+    CASADO("Casado"),
+    SEPARADO("Separado"),
+    DIVORCIADO("Divorciado"),
+    VIUVO("Viuvo");
     
-    private String nome;
+    private String texto;
 
-    private Setor(String nome) {
-        this.nome = nome;
+    private EstadoCivil(String texto) {
+        this.texto = texto;
     }
 
-    public String getNome() {
-        return nome;
+    public String getTexto() {
+        return texto;
     }
     
     

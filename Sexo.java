@@ -2,25 +2,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Enum.java to edit this template
  */
-package com.mycompany.diagramadeclasses;
+package com.mycompany.principal3;
 
 /**
  *
  * @author Aluno
  */
 public enum Sexo {
-    MASCULINO('M'),
-    FEMININO('F');
+    MASCULINO('M',"Masculino"),
+    FEMININO('F',"Feminino");
     
-    char caracter;
+    private char caractere;
+    private String texto;
 
-    private Sexo(char caracter) {
-        this.caracter = caracter;
+    private Sexo(char caractere, String texto) {
+        this.caractere = caractere;
+        this.texto = texto;
     }
 
-    public char getCaracter() {
-        return caracter;
+    public char getCaractere() {
+        return caractere;
     }
-    
-    
+
+    public String getTexto() {
+        return texto;
+    }
+            
 }

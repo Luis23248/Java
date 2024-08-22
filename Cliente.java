@@ -2,38 +2,39 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.principal;
+package com.mycompany.principal3;
 
 /**
  *
  * @author Aluno
  */
-public class Cliente extends Pessoa{
-    private String data_compra;
-    private String forma_pagamento;
+public class Cliente extends Fisica{
+    int ProtocoloAtendimento;
 
-    public Cliente(String data_compra, String forma_pagamento, String nome, int idade, String endereco, String telefone) {
-        super(nome, idade, endereco, telefone);
-        this.data_compra = data_compra;
-        this.forma_pagamento = forma_pagamento;
+    public Cliente(int ProtocoloAtendimento) {
+        this.ProtocoloAtendimento = ProtocoloAtendimento;
     }
 
-    public String getData_compra() {
-        return data_compra;
+    public int getProtocoloAtendimento() {
+        return ProtocoloAtendimento;
     }
 
-    public void setData_compra(String data_compra) {
-        this.data_compra = data_compra;
+    public Sexo getSexo() {
+        return getSexo();
     }
 
-    public String getForma_pagamento() {
-        return forma_pagamento;
+    public EstadoCivil getEstadoCivil() {
+        return getEstadoCivil();
     }
 
-    public void setForma_pagamento(String forma_pagamento) {
-        this.forma_pagamento = forma_pagamento;
+    public String getDataNascimento() {
+        return getDataNascimento();
     }
 
+    @Override
+    public String toString() {
+        return "Cliente{" + "\nProtocoloAtendimento = " + super.toString() + ProtocoloAtendimento + '}';
+    }
+    
     
 }
-
